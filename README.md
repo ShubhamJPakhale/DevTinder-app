@@ -10,4 +10,6 @@
 Libraries installed - 
 1. Tailwindcss with vite 
 2. daisyui - npm i -D daisyui@latest 
-3. 
+3. react-router-dom
+4. axios
+5. 
