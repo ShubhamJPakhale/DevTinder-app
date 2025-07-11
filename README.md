@@ -6,6 +6,10 @@
 - npm run dev - which runs application on localhost 
 - push the project to the github - create repo 
 
+// redux toolkit - 
+- configureStore -> Provider -> createslice -> reducers -> add reducers to the store 
+-
+
 ---------------------
 Libraries installed - 
 1. Tailwindcss with vite 
