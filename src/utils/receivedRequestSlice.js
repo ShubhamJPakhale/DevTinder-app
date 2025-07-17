@@ -7,8 +7,9 @@ const receivedConnectionReqSlice = createSlice({
         receivedReqConnections: (state, action) => {
             return action.payload;
         },
-        removeReceivedReqConnections: () => {
-            return null;
+        removeReceivedReqConnections: (state,action) => {
+        const newArray = state.filter((request) => request._id !== action.payload);
+        return newArray;
         },
     },
 });
