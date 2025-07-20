@@ -20,14 +20,14 @@ const UserCard = ({ user }) => {
   }
 
   return (
-    <div className="card bg-base-300 w-96 shadow-sm">
+    <div className="card bg-base-300 w-96 shadow-sm" style={{ height: "calc(100vh - 260px)" }}>
       <figure>
         <img src={photoUrl} alt={firstName} />
       </figure>
       <div className="card-body">
         <h2 className="card-title flex items-center justify-between">
           <span>{firstName + " " + lastName}</span>
-          <span className="text-red-500">{gender === "male" ? "M" : "F"}</span>
+          {gender && <span className="text-red-500">{gender === "Male" ? "M" : "F"}</span>}
         </h2>
         {age && gender && <p>{age + " " + gender.toLocaleUpperCase()}</p>}
         <p>{about}</p>

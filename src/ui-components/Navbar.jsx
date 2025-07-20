@@ -23,7 +23,7 @@ const Navbar = () => {
   }
   
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm top-0 left-0 right-0">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl">
           <img src="/devtinder.svg" alt="DevTinder" height={20} width={20} />
