@@ -12,7 +12,7 @@ const Premium = () => {
 
 
   //   const verifyPremiumUser = async () => {
-  //     const res = await axios.get(BASE_URL + "/premium/verify", {
+  //     const res = await axios.get( `${BASE_URL}/premium/verify`, {
   //       withCredentials: true,
   //     });
 
@@ -65,7 +65,7 @@ const Premium = () => {
   };
 
   return isUserPremium ? (
-    "You're are already a premium user"
+    <div className="flex justify-center font-bold mt-10">You're are already a premium user</div>
   ) : (
     <div className="m-10">
       <div className="flex w-full justify-center">
