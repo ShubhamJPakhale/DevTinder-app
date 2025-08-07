@@ -4,7 +4,7 @@ import { BASE_URL } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import {removeUserFromFeed} from '../utils/feedSlice';
 
-const UserCard = ({ user }) => {
+const UserCard = ({ user, location }) => {
   const { firstName, lastName, about, photoUrl, age, gender, _id } = user;
 
   const dispatch= useDispatch();
@@ -31,10 +31,12 @@ const UserCard = ({ user }) => {
         </h2>
         {age && gender && <p>{age + " " + gender.toLocaleUpperCase()}</p>}
         <p>{about}</p>
-        <div className="card-actions justify-center">
-          <button className="btn btn-primary" onClick={()=>{handleSendRequest("ignored",_id)}}>Ignore</button>
-          <button className="btn btn-secondary" onClick={()=>{handleSendRequest("interested",_id)}}>Interested</button>
-        </div>
+        {location === "Home" && (
+          <div className="card-actions justify-center">
+            <button className="btn btn-primary" onClick={() => { handleSendRequest("ignored", _id) }}>Ignore</button>
+            <button className="btn btn-secondary" onClick={() => { handleSendRequest("interested", _id) }}>Interested</button>
+          </div>
+        )}
       </div>
     </div>
   );

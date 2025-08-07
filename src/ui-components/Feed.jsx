@@ -33,7 +33,7 @@ const Feed = () => {
   return (
     feed && (
       <div className="flex flex-col items-center justify-center py-10">
-        <UserCard user={feed[0]} />
+        <UserCard user={feed[0]} location="Home" />
       </div>
     )
   );
