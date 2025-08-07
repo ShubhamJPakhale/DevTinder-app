@@ -9,6 +9,7 @@ import appStore from "./utils/appStore";
 import Feed from "./ui-components/Feed";
 import Requests from "./ui-components/Requests";
 import Connections from "./ui-components/Connections";
+import Premium from "./ui-components/Premium";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/connections" element={<Connections />} />
             <Route path="/requests" element={<Requests />} />
+            <Route path="/premium" element={<Premium />} />
           </Route>
         </Routes>
       </BrowserRouter>
