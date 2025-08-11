@@ -10,6 +10,7 @@ import Feed from "./ui-components/Feed";
 import Requests from "./ui-components/Requests";
 import Connections from "./ui-components/Connections";
 import Premium from "./ui-components/Premium";
+import Chat from "./ui-components/Chat";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/connections" element={<Connections />} />
             <Route path="/requests" element={<Requests />} />
             <Route path="/premium" element={<Premium />} />
+            <Route path="/chat/:targetUserId" element={<Chat />} />
           </Route>
         </Routes>
       </BrowserRouter>
