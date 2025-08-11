@@ -60,7 +60,7 @@ const Chat = () => {
       setMessages(chatMessages);
     }catch(err)
     {
-      console.log(`Error fetching chat messages: ${err.message}`)
+      console.error(`Error fetching chat messages: ${err.message}`)
     }
   }
 
@@ -76,7 +76,7 @@ const Chat = () => {
         ) : (
           messages.map((msg, index) => {
             return (
-              <div key={index} className={"chat"+ (user.firstName === msg.userFirstName ? " chat-start" : " chat-end")}>
+              <div key={index} className={"chat"+ (user.firstName === msg.userFirstName ? " chat-end" : " chat-start")}>
               <div className="chat-header text-base font-semibold">
                  {msg.userFirstName}
               </div>
